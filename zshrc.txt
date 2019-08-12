@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias cls="clear"
 alias down="cd ~/Downloads"
+alias desk="cd ~/Desktop"
 alias proj="cd ~/Documents/Projects"
 alias ..="cd .."
 alias ....="cd ../.."
