@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/trinity/.oh-my-zsh
+export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/Users/trinity/Library/Android/sdk
 export ANDROID_TOOLS=${ANDROID_HOME}/platform-tools
 export PATH=${ANDROID_HOME}:${ANDROID_TOOLS}:${PATH}
@@ -45,7 +46,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -112,14 +113,14 @@ alias desk="cd ~/Desktop"
 alias proj="cd ~/Documents/Projects"
 alias ..="cd .."
 alias ....="cd ../.."
+alias bat_stat="system_profiler SPPowerDataType | grep -A3 -B7 'Condition'"
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 alias look="sudo find . -name"
 alias search="sudo grep --color -rnw ./ -e "
 alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
 
 alias xclip="xclip -selection c"
-
-alias speedtest="wget -O /dev/null cachefly.cachefly.net/100mb.test"
 export LSCOLORS=""
 
 export PROMPT_COMMAND="history -a; history -n"
@@ -133,3 +134,6 @@ function mkd {
 shrt() {
 	curl -F "shorten=${1}" https://0x0.st
 }
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
