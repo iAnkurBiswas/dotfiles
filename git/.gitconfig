@@ -1,0 +1,16 @@
+[user]
+	name = Ankur Biswas
+	email = iankurbiswas@outlook.com
+[credential]
+	helper = osxkeychain
+[alias]
+	a = add
+	cm = commit -m
+	s = status
+	ptm = push -u origin master
+	pfm = pull origin master
+	cob = checkout -b
+[color]
+	ui = auto
+[core]
+  editor = vim
