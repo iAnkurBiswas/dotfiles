@@ -2,9 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/trinity/.oh-my-zsh
-export JAVA_HOME=$(/usr/libexec/java_home)
-export ANDROID_HOME=/Users/trinity/Library/Android/sdk
+export ZSH="/Users/ankur/.oh-my-zsh"
+export ANDROID_HOME="/Users/ankur/Library/Android/sdk/"
 export ANDROID_TOOLS=${ANDROID_HOME}/platform-tools
 export PATH=${ANDROID_HOME}:${ANDROID_TOOLS}:${PATH}
 
@@ -112,11 +111,13 @@ alias cls="clear"
 alias down="cd ~/Downloads"
 alias desk="cd ~/Desktop"
 alias nh="cd ~/Documents/code/github.com/naturehub.com/"
+alias proj="cd ~/Documents/code/"
 
 alias ..="cd .."
 alias ....="cd ../.."
+alias run_mongo="sudo mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log"
 
-alias bat_stat="system_profiler SPPowerDataType | grep -A3 -B7 'Condition'"
+alias bat_status="system_profiler SPPowerDataType | grep -A3 -B7 'Condition'"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 alias brewup="brew update; brew upgrade; brew cleanup; brew doctor;"
