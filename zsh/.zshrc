@@ -3,7 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ankur/.oh-my-zsh"
-export ANDROID_HOME="/Users/ankur/Library/Android/sdk/"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_301.jdk/Contents/Home"
+export ANDROID_HOME=/Users/trinity/Library/Android/sdk
 export ANDROID_TOOLS=${ANDROID_HOME}/platform-tools
 export PATH=${ANDROID_HOME}:${ANDROID_TOOLS}:${PATH}
 
@@ -115,6 +116,7 @@ alias proj="cd ~/Documents/code/"
 
 alias ..="cd .."
 alias ....="cd ../.."
+alias list="tree -L 1"
 alias run_mongo="sudo mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log"
 
 alias bat_status="system_profiler SPPowerDataType | grep -A3 -B7 'Condition'"
