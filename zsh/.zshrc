@@ -83,7 +83,7 @@ plugins=(
   node
   npm
 )
-
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=100"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
