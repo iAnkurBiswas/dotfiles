@@ -5,8 +5,11 @@
 	helper = osxkeychain
 [alias]
 	a = add
-	cm = commit -m
 	s = status
+	cm = commit -am
+	up = commit --amend
+	sv = stash save
+	lg = log --graph --oneline --decorate
 	ptm = push -u origin master
 	pfm = pull origin master
 	cob = checkout -b
