@@ -1,8 +1,8 @@
 {
-    "workbench.iconTheme": "city-lights-icons-vsc-light",
-    "workbench.colorTheme": "City Lights",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "GitHub Dark",
     "extensions.ignoreRecommendations": true,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "MonoLisa",
     "editor.fontLigatures": true,
     "editor.detectIndentation": true,
     "editor.insertSpaces": false,
@@ -19,7 +19,8 @@
     "editor.smoothScrolling": true,
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.wordWrap": "off",
+    "editor.wordWrap": "on",
+    "editor.suggestSelection": "recentlyUsed",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "telemetry.enableCrashReporter": false,
@@ -40,12 +41,13 @@
         "**/.git": true,
         "**/.DS_Store": true,
         "**/node_modules": true,
-        "**/www": true,
         "**/platforms": true,
         "**/plugins": true,
         "**/resources": true,
         "**/e2e": true,
-        "**/android": true
+        "**/android": true,
+        "**/www": true,
+        "**/assets": true,
     },
     "search.exclude": {
         "**/build": true,
@@ -61,10 +63,12 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "explorer.confirmDelete": false,
     "workbench.startupEditor": "newUntitledFile",
     "vsicons.dontShowNewVersionMessage": true,
-    "city-lights-icons-vsc.hidesExplorerArrows": false,
     "workbench.productIconTheme": "material-product-icons",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
@@ -72,4 +76,49 @@
     "editor.cursorStyle": "underline-thin",
     "editor.lineNumbers": "on",
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "workbench.editor.untitled.hint": "hidden",
+    "scss.lint.validProperties": [
+        "mso-table-lspace",
+        "mso-table-rspace",
+        "mso-line-height-rule",
+        "mso-hide",
+        "mso-style-priority"
+    ],
+    "css.lint.validProperties": [
+        "mso-table-lspace",
+        "mso-table-rspace",
+        "mso-line-height-rule",
+        "mso-hide",
+        "mso-style-priority"
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.restoreWindows": "none",
+    "files.hotExit": "off",
+    "editor.fontSize": 13,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.statusBar.visible": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.defaultDateFormat": null,
+    "gitlens.defaultDateShortFormat": null,
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Recent Issues",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "editor.linkedEditing": true,
+    "terminal.integrated.allowMnemonics": true
 }
