@@ -8,9 +8,8 @@ export ANDROID_HOME=/Users/trinity/Library/Android/sdk
 export ANDROID_TOOLS=${ANDROID_HOME}/platform-tools
 export PATH=${ANDROID_HOME}:${ANDROID_TOOLS}:${PATH}
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/node@16/bin:$PATH"
 
-ZSH_THEME="gozilla"
+ZSH_THEME=""
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
@@ -18,9 +17,24 @@ DISABLE_MAGIC_FUNCTIONS="true"
 plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
+  git
+  brew
+  common-aliases
+  node
+  npm
+  yarn
+  colorize
+  sudo
 )
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=100"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 source $ZSH/oh-my-zsh.sh
+
+# Pure setup
+autoload -U promptinit && promptinit
+
+# optionally define some options
+PURE_CMD_MAX_EXEC_TIME=10
+prompt purity
 
 # Alias
 alias cls="clear"
@@ -51,3 +65,5 @@ shrt() {
 mp3 () {
   youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s' "$1"
 }
+# Intalled manually Node-v.16
+export PATH="/usr/local/opt/node@16/bin:$PATH"
